@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #FFF3E0;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        #header {
+            width: 100%;
+            height: 100px;
+            background-color: #FFE0B2;
+        }
+        #nav {
+            width: 100%;
+            height: 100px;
+            background-color: #FFCC80;
+        }
+        #aside {
+            width: 30%;
+            height: 780px;
+            background-color: #FFB74D;
+            float: left;
+        }
+        #section {
+            width: 70%;
+            height: 780px;
+            background-color: #FFA726;
+            float: left;
+        }
+        #footer {
+            width: 100%;
+            height: 100px;
+            background-color: #FF9800;
+            clear: both;
+        }
+
+        /* 미디어쿼리 */
+        @media (max-width: 1300px){
+            #wrap {
+            width: 96%;
+            }
+        }
+        /* 0부터 최대 1280까지 가능하다는 뜻이다  살짝 오차가 생기기 때문에 20px의 여백을 주고 레이아웃이 1280이어도 살짝의 여백을 줘야 하기 떄문에
+        96퍼센트로 해준다. */
+
+        @media (max-width: 768px){
+            #wrap {
+            width: 100%;
+            }
+        }
+        /* 화면이 768px일 경우에는 여백없이 화면이 꽉차므로 100%로 해준다. */
+        @media (max-width: 480px){
+            #aside {
+                width: 100%;
+                height: 300px;
+            }
+            #section {
+                width: 100%;
+                height: 480px;
+            }
+        }
+
+        /* 여기는 100프로를 넣을 필요가 없다 이미 위에서 반영된 것이다  그러나 모바일 구조에서는 aisde와 section이 바뀐다. 둘다 구조변경 
+        해주어야 한다. 768까지는 aside와 section이 가로로 정렬이었지만 480에서는 세로로 정렬이다 이떄는 그냥 width값을 100프로로 해주면 된다.  */
+    </style>
+<body>
+    <div id="wrap">
+        <div id="header"></div>
+        <div id="nav"></div>
+        <div id="aside"></div>
+        <div id="section"></div>
+        <div id="footer"></div>
+    </div>
+    
+    <!-- 
+        layout01_02: float 방식 반응형 레이아웃
+     -->
+</body>
+</html>
